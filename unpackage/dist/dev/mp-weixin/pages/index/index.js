@@ -231,7 +231,9 @@ __webpack_require__.r(__webpack_exports__);
       { id: '01', img: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=944933763,1608605451&fm=15&gp=0.jpg', name: '星辉家园', address: '佛山 三水', allmoney: '172', pfmoney: '8214', latitude: 39.929, longitude: 116.39522 },
       { id: '02', img: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=144259019,1194700251&fm=15&gp=0.jpg', name: '星辉南湾', address: '佛山 南海', allmoney: '200', pfmoney: '8214', latitude: 39.929, longitude: 116.39522 },
       { id: '03', img: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=476433651,2640023555&fm=15&gp=0.jpg', name: '万科精修小洋楼', address: '佛山 禅城', allmoney: '178', pfmoney: '9820', latitude: 39.929, longitude: 116.39522 },
-      { id: '04', img: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2314787491,618093992&fm=15&gp=0.jpg', name: '碧桂园', address: '惠州 惠东', allmoney: '198', pfmoney: '7914', latitude: 39.929, longitude: 116.39522 }],
+      { id: '04', img: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2314787491,618093992&fm=15&gp=0.jpg', name: '碧桂园', address: '惠州 惠东', allmoney: '198', pfmoney: '7914', latitude: 39.929, longitude: 116.39522 },
+      { id: '02', img: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=144259019,1194700251&fm=15&gp=0.jpg', name: '星辉南', address: '佛山 南海', allmoney: '220', pfmoney: '8214', latitude: 39.921, longitude: 116.39522 }],
+
 
       loading: true };
 
