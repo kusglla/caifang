@@ -1,0 +1,84 @@
+
+.page{
+	width: 100%;
+	padding-top: 100rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	background: #F1F1F1;
+}
+.swiper-item{
+	width: 100%!important;
+	height: 100%!important;
+}
+.swiper-item image{
+	width: 100%;
+	height: 100%;
+}
+.xxk{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	margin-top: 30rpx;
+}
+.xxk-item{
+	font-size: 24rpx;
+	text-align: center;
+}
+.xxk image{
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+}
+
+/* 热卖新房 */
+.hot-house{
+	margin: 40rpx 25rpx 0rpx;
+	padding-top: 40rpx;
+	border-top: 1rpx #C0C0C0 solid;
+}
+.hot-house .title{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.hot-house .title .more{
+	font-size: 24rpx;
+	color: #C0C0C0;
+}
+.hot-house .content{
+	white-space: nowrap;
+	margin: 40rpx 0rpx;
+}
+.hot-house .content .content-item{
+	margin-left: 20rpx;
+	display: inline-block;
+	width: 300rpx;
+}
+.hot-house .content .content-item:nth-child(1){
+	margin-left: 0rpx;
+}
+.house-name{
+	font-size: 24rpx;
+}
+.house-money{
+	font-size: 22rpx;
+}
+.font-sm{
+	font-size: 24rpx;
+}
+.font-bs{
+	font-size: 28rpx;
+}
+.font-lg{
+	font-size: 32rpx;
+}
+

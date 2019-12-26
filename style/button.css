@@ -1,0 +1,17 @@
+.btn-positive {
+  height: 88rpx;
+  border-color: transparent;
+  box-shadow: 0 6rpx 20rpx rgba(0, 0, 0, 0.16);
+  background-color: #17aee6 !important;
+  color: white !important;
+  text-align: center;
+  line-height: 88rpx;
+  border-radius: 44rpx;
+  overflow: hidden;
+  width: 163px;
+  margin: 0 auto;
+}
+
+.btn-positive::after {
+  display: none;
+}
