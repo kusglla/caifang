@@ -46,7 +46,7 @@
 			<scroll-view scroll-x="true" class="content">
 				<view v-for="item in HouseList" class="content-item">
 					<view><image style="height: 200rpx; width: 300rpx; border-radius: 5rpx;" src="http://img1.imgtn.bdimg.com/it/u=2173418683,546044082&fm=26&gp=0.jpg" mode=""></view>
-					<view style="font-size: 28rpx;">国风云越花园</view>
+					<view style="font-size: 28rpx;">国风云花园</view>
 					<view style="display: flex; justify-content: space-between; align-items: center;">
 						<text class="house-money">89-120m²</text>
 						<view>

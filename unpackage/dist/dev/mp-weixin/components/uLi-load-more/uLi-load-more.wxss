@@ -28,14 +28,14 @@
   font-family: 'iconfont';
   src: url("https://at.alicdn.com/t/font_1288772_8nmx02hevxl.ttf") format("truetype");
 }
-.loadingView.data-v-0a4cfecf {
+.loadingView.data-v-30d73777 {
   font-family: iconfont;
   line-height: 1;
   font-size: 40rpx;
-  -webkit-animation: rotate-data-v-0a4cfecf 3s linear infinite;
-          animation: rotate-data-v-0a4cfecf 3s linear infinite;
+  -webkit-animation: rotate-data-v-30d73777 3s linear infinite;
+          animation: rotate-data-v-30d73777 3s linear infinite;
 }
-@-webkit-keyframes rotate-data-v-0a4cfecf {
+@-webkit-keyframes rotate-data-v-30d73777 {
 from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -45,7 +45,7 @@ to {
             transform: rotate(360deg);
 }
 }
-@keyframes rotate-data-v-0a4cfecf {
+@keyframes rotate-data-v-30d73777 {
 from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -55,7 +55,7 @@ to {
             transform: rotate(360deg);
 }
 }
-.uni-load-more.data-v-0a4cfecf {
+.uni-load-more.data-v-30d73777 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -75,11 +75,11 @@ to {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.uni-load-more__text.data-v-0a4cfecf {
+.uni-load-more__text.data-v-30d73777 {
     font-size: 28rpx;
     color: #999;
 }
-.uni-load-more__img.data-v-0a4cfecf {
+.uni-load-more__img.data-v-30d73777 {
     height: 24px;
     width: 24px;
     margin-right: 10px;
