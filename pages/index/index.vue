@@ -73,7 +73,7 @@
 				</view>
 				<view style="width: 300rpx;">
 					<view class="font-lg" style="overflow: hidden;text-overflow: ellipsis;">{{item.name}}</view>
-					<view class="font-sm mt-10">3室2厅2卫生 121.86m²</view>
+					<view class="font-sm mt-10">4室2厅2卫生 121.86m²</view>
 					<view class="font-sm mt-5">{{item.address}}</view>
 				</view>
 				<view style="display: flex;flex-direction: column;align-items: flex-end;justify-content: center; color: #E98A51;">
