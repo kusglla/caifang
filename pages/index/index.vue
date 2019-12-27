@@ -1,22 +1,26 @@
 <template>
 	<view class="page">
+		<!-- 搜索栏 -->
 		<view style="position: fixed;top: 0;width: 100%; z-index: 9999;">
 			<uni-search-bar @confirm="search" @input="input" cancelButton="none" ></uni-search-bar>
 		</view>
+		<!-- 搜索栏end -->
+		
 		
 		<!-- 轮播图 -->
 		<swiper :autoplay="true" :interval="3000" :duration="1000" >
 			<swiper-item>
-				<view class="swiper-item"><image src="http://img1.imgtn.bdimg.com/it/u=2173418683,546044082&fm=26&gp=0.jpg"></image></view>
+				<view class="swiper-item"><image src="http://img5.imgtn.bdimg.com/it/u=1003927797,3379999590&fm=26&gp=0.jpg"></image></view>
 			</swiper-item>
 			<swiper-item>
-				<view class="swiper-item"><image src="http://img3.imgtn.bdimg.com/it/u=2038741492,1420838963&fm=26&gp=0.jpg"></image></view>
+				<view class="swiper-item"><image src="http://img3.imgtn.bdimg.com/it/u=1041281687,2404179784&fm=26&gp=0.jpg"></image></view>
 			</swiper-item>
 			<swiper-item>
-				<view class="swiper-item"><image src="http://img2.imgtn.bdimg.com/it/u=1014376233,4293797259&fm=26&gp=0.jpg"></image></view>
+				<view class="swiper-item"><image src="http://img1.imgtn.bdimg.com/it/u=3561208366,4229610799&fm=26&gp=0.jpg"></image></view>
 			</swiper-item>
 		</swiper>
 		<!-- 轮播图end -->
+		
 		
 		<!-- 选项卡 -->
 		<view class="xxk">
@@ -28,30 +32,30 @@
 		<!-- 选项卡end -->
 		
 		<!-- 群聚 -->
-		<scroll-view scroll-x="true" style="margin-top: 20rpx;white-space: nowrap; ">
-			<view v-for="item in 7" style="width: 240rpx; height: 300rpx;display: inline-block; margin-left: 20rpx; box-sizing: border-box; padding: 20rpx; 4rpx; 4rpx;4rpx; background: #FFFFFF;">
+		<scroll-view scroll-x="true" class="mt-20" style="white-space: nowrap; ">
+			<view v-for="item in HouseList" style="width: 240rpx; height: 300rpx;display: inline-block; margin-left: 20rpx; box-sizing: border-box; padding: 20rpx; 4rpx; 4rpx;4rpx; background: #FFFFFF;">
 				<view>买房卖房</view>
 				<view>一键搞定</view>
-				<image src="http://img2.imgtn.bdimg.com/it/u=1014376233,4293797259&fm=26&gp=0.jpg" mode="" style="width: 100%;height: 160rpx;"></image>
+				<image :src="item.img" mode="" style="width: 100%;height: 160rpx;"></image>
 			</view>
 		</scroll-view>
 		<!-- 群聚end -->
 		
-		<!-- 优选二手房 -->
+		<!-- 热卖新盘 -->
 		<view class="hot-house">
 			<view class="title">
 				<view>热卖新盘</view>
-				<view class="more">查看全部 > </view>
+				<view class="more" @click="onHouseList">查看全部 > </view>
 			</view>
 			<scroll-view scroll-x="true" class="content">
 				<view v-for="item in HouseList" class="content-item">
-					<view><image style="height: 200rpx; width: 300rpx; border-radius: 5rpx;" src="http://img1.imgtn.bdimg.com/it/u=2173418683,546044082&fm=26&gp=0.jpg" mode=""></view>
-					<view style="font-size: 28rpx;">国风云花园</view>
+					<view><image style="height: 200rpx; width: 300rpx; border-radius: 5rpx;" :src="item.img" mode=""></view>
+					<view class="f-28">{{item.name}}</view>
 					<view style="display: flex; justify-content: space-between; align-items: center;">
 						<text class="house-money">89-120m²</text>
 						<view>
-							<text style="font-size: 24rpx;">250-250</text>
-							<text style="font-size: 28rpx;color: #F0AD4E;">万</text>
+							<text class="f-24">250-250</text>
+							<text class="f-28" style="color: #F0AD4E;">万</text>
 						</view>
 					</view>
 				</view>
@@ -64,7 +68,7 @@
 		<view class="hot-house">
 			<view class="title">
 				<view>精选新房</view>
-				<view class="more">查看全部 > </view>
+				<view class="more" @click="onHouseList">查看全部 > </view>
 			</view>
 			
 			<view v-for="item in HouseList" @click="ondetail(item)" class="content" style="display: flex;justify-content: space-between;">
@@ -100,9 +104,9 @@
 					{id:'03',img:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=476433651,2640023555&fm=15&gp=0.jpg',name:'万科精修小洋楼',address:'佛山 禅城', allmoney:'178',pfmoney:'9820',latitude:39.929,longitude:116.39522},
 					{id:'04',img:'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2314787491,618093992&fm=15&gp=0.jpg',name:'碧桂园',address:'惠州 惠东', allmoney:'198',pfmoney:'7914',latitude:39.929,longitude:116.39522},
 					{id:'02',img:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=144259019,1194700251&fm=15&gp=0.jpg',name:'星辉南',address:'佛山 南海', allmoney:'220',pfmoney:'8214',latitude:39.921,longitude:116.39522}
-				
 				],
-				loading:true
+				loading:true,
+				ReachBottomCount:0
 			}
 		},
 		onLoad() {
@@ -115,15 +119,27 @@
 			input(){
 				
 			},
+			
+			//详情页
 			ondetail(item){
 				uni.navigateTo({
 					url:"./detail?item="+ encodeURIComponent(JSON.stringify(item))
 				})
 			},
+			
+			// 房屋列表
+			onHouseList(){
+				uni.navigateTo({
+					url:'./houseList'
+				})
+			},
+			
+			// 下拉刷新
 			onReachBottom(){
-				if(this.HouseList.length<30){
+				this.ReachBottomCount+=1;
+				if(this.ReachBottomCount<4){
 					setTimeout(()=>{
-						this.HouseList = [...this.HouseList,...this.HouseList]
+						this.HouseList = [...this.HouseList,...this.HouseList.slice(1,5)]
 					},500)
 				}else{
 					this.loading = false
@@ -147,6 +163,10 @@
  	padding-top: 100rpx;
  	box-sizing: border-box;
  	background: #F1F1F1;
+ }
+ 
+ swiper{
+	height: 380rpx;
  }
  
  .swiper-item{

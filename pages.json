@@ -8,9 +8,15 @@
             }
         },
 		{
-		    "path" : "pages/index/detail",
+		    "path" : "pages/index/houseList",
 		    "style" : {
 		        "navigationBarTitleText" : "房屋详情"
+		    }
+		},
+		{
+		    "path" : "pages/index/detail",
+		    "style" : {
+		        "navigationBarTitleText" : "快速找房"
 		    }
 		},
         {

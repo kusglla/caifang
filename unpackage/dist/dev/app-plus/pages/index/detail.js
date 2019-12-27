@@ -1,0 +1,2 @@
+setCssToHead(["wx-swiper{ height: ",[0,400],"!important; }\n.",[1],"swiper-item{ width: 100%!important; height: 100%!important; }\n.",[1],"swiper-item wx-image{ width: 100%; height: 100%; }\nwx-map{ width: 100%!important; height: ",[0,360],"; }\n",],undefined,{path:"./pages/index/detail.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/index/detail.wxml') } }));

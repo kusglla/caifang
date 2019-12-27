@@ -1,0 +1,17 @@
+
+swiper{
+	height: 400rpx!important;
+}
+.swiper-item{
+	width: 100%!important;
+	height: 100%!important;
+}
+.swiper-item image{
+	width: 100%;
+	height: 100%;
+}
+map{
+	width: 100%!important;
+	height: 360rpx;
+}
+
