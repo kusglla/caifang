@@ -35,7 +35,7 @@
 		<scroll-view scroll-x="true" class="mt-20" style="white-space: nowrap; ">
 			<view v-for="item in HouseList" style="width: 240rpx; height: 300rpx;display: inline-block; margin-left: 20rpx; box-sizing: border-box; padding: 20rpx; 4rpx; 4rpx;4rpx; background: #FFFFFF;">
 				<view>买房卖房</view>
-				<view>一键搞定</view>
+				<view>一键搞定1</view>
 				<image :src="item.img" mode="" style="width: 100%;height: 160rpx;"></image>
 			</view>
 		</scroll-view>
