@@ -87,11 +87,8 @@
 			</view>
 			<uni-load-more v-if="loading" :loadingType="0"></uni-load-more>
 		</view>
-
-
 	</view>
 </template>
-
 <script>
 	import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue';
 	import uniLoadMore from '@/components/uLi-load-more/uLi-load-more.vue'

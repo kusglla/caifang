@@ -7,18 +7,18 @@
                 "navigationBarTitleText" : "采房首页"
             }
         },
-		{
-		    "path" : "pages/index/houseList",
-		    "style" : {
-		        "navigationBarTitleText" : "房屋详情"
-		    }
-		},
-		{
-		    "path" : "pages/index/detail",
-		    "style" : {
-		        "navigationBarTitleText" : "快速找房"
-		    }
-		},
+        {
+            "path" : "pages/index/houseList",
+            "style" : {
+                "navigationBarTitleText" : "房屋详情"
+            }
+        },
+        {
+            "path" : "pages/index/detail",
+            "style" : {
+                "navigationBarTitleText" : "快速找房"
+            }
+        },
         {
             "path" : "pages/message/message",
             "style" : {
@@ -33,11 +33,15 @@
         },
         {
             "path" : "pages/register/register",
-            "style" : {}
+            "style" : {
+                "navigationBarTitleText" : "手机注册"
+            }
         },
         {
-            "path" : "pages/register/login",
-            "style" : {}
+            "path" : "pages/login/login",
+            "style" : {
+                "navigationBarTitleText" : "用户登录"
+            }
         }
     ],
     "tabBar" : {
