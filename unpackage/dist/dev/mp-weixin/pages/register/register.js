@@ -151,8 +151,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-var _default =
-{
+
+// @import {}from "register.js";
+var _default = {
   name: "uni-countdown",
 
   data: function data() {
@@ -166,15 +167,18 @@ var _default =
       id: 1 };
 
   },
+  onLoad: function onLoad() {
 
+  },
   methods: {
     onInput: function onInput(e) {
-      return RegExp(/^1[34578]\d{11}$/).test(e);
+      return RegExp(/^1[3456789]\d{11}$/).test(e);
       alert(e);
       //不用v-model绑定表单，直接时间获取值 这是uni-app官方方式
       console.log(e.detail); //{value:"12345678910",cursor:1}
       this.phone = e.detail;
     },
+
     setInterValFunc: function setInterValFunc(obj) {
       this.setTime = setInterval(function () {
         obj.countDown(obj);

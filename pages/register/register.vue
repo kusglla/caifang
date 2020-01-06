@@ -5,7 +5,7 @@
 		    <view class="has-mglr-10 ">
 		        <view class=" has-mgtb-10 ">
 					<view class="userow uni-form-item uni-column">
-						<input name="phone"  type="number" maxlength="11" focus placeholder="请输入手机号"
+						<input name="phone" id="phone"  type="number" maxlength="11" focus placeholder="请输入手机号"
 						 @input="onInput" class="is-input1 " :verification="['isNull','phone']" :verificationTip="['手机号码不能为空','请输入正确的手机号']" 
 						 required validate pattern ="[0-9]{11}" data-error-message="手机号格式不正确"/>
 						 <span class="error-message"></span>
@@ -17,17 +17,18 @@
 		        </view>
 		      
 		         <view class=" has-radius has-mgtb-10">
-		             <input name="password" placeholder="请输入验证码" :password="true" class="is-input2" />
+		             <input name="password" maxlength="6" placeholder="请输入验证码" :password="true" class="is-input2" />
 		        </view>
 		        <view class=" registerbtn has-radius has-mgtb-20">
 		             <button form-type="submit">注 册</button>
 		        </view>
-				<view class="register-agreement">注册即 <navigator url="#">注册则表示同意采房协议</navigator></view>
+				<view class="register-agreement">注册即 <navigator url="#">&nbsp;&nbsp;注册则表示同意采房协议</navigator></view>
 		     </view>
 		</form>
 	</view>
 </template>
 <script>
+	// @import {}from "register.js";
 	export default {
 			name: "uni-countdown",
 			
@@ -42,15 +43,18 @@
 					id:1
 				}
 			},
-			
+			onLoad:function(){
+				
+			},
 			methods: {
 				onInput(e){
-					return RegExp(/^1[34578]\d{11}$/).test(e)
+					return RegExp(/^1[3456789]\d{11}$/).test(e)
 					alert(e);
 					//不用v-model绑定表单，直接时间获取值 这是uni-app官方方式
 					console.log(e.detail)//{value:"12345678910",cursor:1}
 					this.phone = e.detail
 				},
+				
 				setInterValFunc: function(obj) {
 					this.setTime = setInterval(function() {
 						obj.countDown(obj);
@@ -91,8 +95,10 @@
 				    	}
 				    });		
 			    },
-			},
+			
+			}
 		}
+		
 </script>
 <style>
 	.content{

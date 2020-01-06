@@ -5,7 +5,7 @@
 				<view class="face"><image :src="userinfo.face"></image></view>
 				<view class="info">
 					<view class="username">
-						<navigator url="../register/login">
+						<navigator url="../login/login">
 							{{userinfo.username}}
 						</navigator>
 					</view>
