@@ -5,7 +5,7 @@
 				<view class="face"><image :src="userinfo.face"></image></view>
 				<view class="info">
 					<view class="username">
-						<navigator url="../login/login">
+						<navigator url="/static/img/login">
 							{{userinfo.username}}
 						</navigator>
 					</view>
@@ -20,12 +20,12 @@
 		</view>
 		<view class="list" v-for="(list,list_i) in severList" :key="list_i">
 			<view class="li" v-for="(li,li_i) in list" @tap="toPage(list_i,li_i)" v-bind:class="{'noborder':li_i==list.length-1}"  hover-class="hover" :key="li.name" >
-				<view class="icon"><image :src="'/static/img/login/icon/'+li.icon"></image></view>
+				<view class="icon"><image :src="'/static/img/login/'+li.icon"></image></view>
 				<view class="text">{{li.name}}</view>
-				<image class="to" src=""></image>
+				<image class="to" src="/static/img/login/to.png"></image>
 			</view>
 		</view>
-		<navigator url="../register/login">
+		<navigator url="../login/login">
 			<button class="mine-btn" type="warn" size="default">{{loginBtn}}</button>
 		</navigator>
 		
@@ -36,14 +36,9 @@
 		data() {
 			// cityName:"佛山实时房价";
 			return {
-				//#ifdef APP-PLUS
-				isH5Plus:true,
-				//#endif
-				//#ifndef APP-PLUS
-				//#endif
 				userinfo:{},
 				severList:[
-					[   {name:'佛山实时房价',icon:'map.jpg'},
+					[   {name:'佛山实时房价',icon:'map.png'},
 						{name:'我的关注',icon:'heart.png'},
 						{name:'浏览历史',icon:'time.png'},
 						{name:'我的优惠卷',icon:'money.png'},
@@ -61,7 +56,7 @@
 			init() {
 				//用户信息
 				this.userinfo={
-					// face:'/static/img/login/face.jpeg',
+					face:'/static/img/login/face.jpeg',
 					username:"点击注册/登录"
 				}		
 			},

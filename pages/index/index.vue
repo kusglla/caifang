@@ -20,22 +20,27 @@
 			</swiper-item>
 		</swiper>
 		<!-- 轮播图end -->
-		
-		
 		<!-- 选项卡 -->
 		<view class="xxk">
-			<view class="xxk-item" v-for="item in 5">
-				<view><image src="http://img1.imgtn.bdimg.com/it/u=2173418683,546044082&fm=26&gp=0.jpg" mode="scaleToFill"></image></view>
-				<text>新房</text>
+			<view v-for="(item,index) in itemList" :key="index" class="in-row" hover-class="hover" @click="goDetail(index)">
+				<view class="xxk-item" v-if="show" @tap="itemList" >
+					<image :src="'../../static/img/index/'+item.icon" mode="true"></image>
+				</view>
+				<view class="xxk-text" v-if="show" @tap="itemList">
+					{{item.name}}
+				</view>
 			</view>
 		</view>
 		<!-- 选项卡end -->
 		
 		<!-- 群聚 -->
 		<scroll-view scroll-x="true" class="mt-20" style="white-space: nowrap; ">
-			<view v-for="item in HouseList" style="width: 240rpx; height: 300rpx;display: inline-block; margin-left: 20rpx; box-sizing: border-box; padding: 20rpx; 4rpx; 4rpx;4rpx; background: #FFFFFF;">
-				<view>买房卖房</view>
-				<view>一键搞定1</view>
+			<view v-for="item in HouseList" style="width: 240rpx; height: 300rpx;display: inline-block; margin-left: 20rpx; 
+			box-sizing: border-box; padding: 20rpx; 4rpx; 4rpx;4rpx; background: #FFFFFF;">
+				<view style="font-size:26upx;line-height:40upx;">
+					<view>买房卖房</view>
+					<view>一键搞定1</view>
+				</view>
 				<image :src="item.img" mode="" style="width: 100%;height: 160rpx;"></image>
 			</view>
 		</scroll-view>
@@ -62,7 +67,6 @@
 			</scroll-view>
 		</view>
 		<!-- 优选二手房end -->
-		
 		
 		<!-- 精选新房 -->
 		<view class="hot-house">
@@ -103,7 +107,17 @@
 					{id:'02',img:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=144259019,1194700251&fm=15&gp=0.jpg',name:'星辉南',address:'佛山 南海', allmoney:'220',pfmoney:'8214',latitude:39.921,longitude:116.39522}
 				],
 				loading:true,
-				ReachBottomCount:0
+				ReachBottomCount:0,
+				//选项卡
+				itemList:[
+					{icon:'new.png',name:'新房'},
+					{icon:'quarters.png',name:'查成交'},
+					{icon:'xiao.png',name:'找小区'},
+					{icon:'house-price.png',name:'查房价'},
+					{icon:'agent.png',name:'找经纪人'}
+					
+				],
+				show:true
 			}
 		},
 		onLoad() {
@@ -115,6 +129,56 @@
 			},
 			input(){
 				
+			},
+			//选项部分
+			goDetail(e){
+				let that = this;
+				console.log(e);
+				if(e==0){
+					that.new();
+				}
+				if(e ==1){
+					that.agent();
+				}
+				if(e ==2){
+					that.xiao();
+				}
+				if(e ==3){
+					that.housePrice();
+				}
+				if(e ==4){
+					that.quarters();
+				}
+			},
+			new(){
+				uni.navigateTo({
+					url: '../tabs/new',
+					success: res => {}
+				});
+			},
+			agent(){
+				uni.navigateTo({
+					url: '../tabs/agent',
+					success: res => {}
+				});
+			},
+			xiao(){
+				uni.navigateTo({
+					url: '../tabs/xiao',
+					success: res => {}
+				});
+			},
+			housePrice(){
+				uni.navigateTo({
+					url: '../tabs/housePrice',
+					success: res => {}
+				});
+			},
+			quarters(){
+				uni.navigateTo({
+					url: '../tabs/quarters',
+					success: res => {}
+				});
 			},
 			
 			//详情页
@@ -128,13 +192,13 @@
 			onHouseList(){
 				uni.navigateTo({
 					url:'./houseList'
-				})
+				});
 			},
 			
 			// 下拉刷新
 			onReachBottom(){
 				this.ReachBottomCount+=1;
-				if(this.ReachBottomCount<4){
+				if(this.ReachBottomCount<5){
 					setTimeout(()=>{
 						this.HouseList = [...this.HouseList,...this.HouseList.slice(1,5)]
 					},500)
@@ -187,6 +251,10 @@
  	text-align: center;
  }
  
+ .xxk-text{
+	 font-size:24upx;
+	 text-align: center;
+ }
  .xxk image{
  	width: 80rpx;
  	height: 80rpx;

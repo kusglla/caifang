@@ -131,7 +131,11 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance");}function _iterableToArray(iter) {if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) {for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {arr2[i] = arr[i];}return arr2;}}var uniSearchBar = function uniSearchBar() {return __webpack_require__.e(/*! import() | components/uni-search-bar/uni-search-bar */ "components/uni-search-bar/uni-search-bar").then(__webpack_require__.bind(null, /*! @/components/uni-search-bar/uni-search-bar.vue */ 67));};var uniLoadMore = function uniLoadMore() {return __webpack_require__.e(/*! import() | components/uLi-load-more/uLi-load-more */ "components/uLi-load-more/uLi-load-more").then(__webpack_require__.bind(null, /*! @/components/uLi-load-more/uLi-load-more.vue */ 74));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance");}function _iterableToArray(iter) {if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) {for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {arr2[i] = arr[i];}return arr2;}}var uniSearchBar = function uniSearchBar() {return __webpack_require__.e(/*! import() | components/uni-search-bar/uni-search-bar */ "components/uni-search-bar/uni-search-bar").then(__webpack_require__.bind(null, /*! @/components/uni-search-bar/uni-search-bar.vue */ 105));};var uniLoadMore = function uniLoadMore() {return __webpack_require__.e(/*! import() | components/uLi-load-more/uLi-load-more */ "components/uLi-load-more/uLi-load-more").then(__webpack_require__.bind(null, /*! @/components/uLi-load-more/uLi-load-more.vue */ 112));};var _default =
+
+
+
+
 
 
 
@@ -236,7 +240,17 @@ __webpack_require__.r(__webpack_exports__);
       { id: '02', img: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=144259019,1194700251&fm=15&gp=0.jpg', name: '星辉南', address: '佛山 南海', allmoney: '220', pfmoney: '8214', latitude: 39.921, longitude: 116.39522 }],
 
       loading: true,
-      ReachBottomCount: 0 };
+      ReachBottomCount: 0,
+      //选项卡
+      itemList: [
+      { icon: 'new.png', name: '新房' },
+      { icon: 'quarters.png', name: '查成交' },
+      { icon: 'xiao.png', name: '找小区' },
+      { icon: 'house-price.png', name: '查房价' },
+      { icon: 'agent.png', name: '找经纪人' }],
+
+
+      show: true };
 
   },
   onLoad: function onLoad() {
@@ -247,6 +261,56 @@ __webpack_require__.r(__webpack_exports__);
 
     },
     input: function input() {
+
+    },
+    //选项部分
+    goDetail: function goDetail(e) {
+      var that = this;
+      console.log(e);
+      if (e == 0) {
+        that.new();
+      }
+      if (e == 1) {
+        that.agent();
+      }
+      if (e == 2) {
+        that.xiao();
+      }
+      if (e == 3) {
+        that.housePrice();
+      }
+      if (e == 4) {
+        that.quarters();
+      }
+    },
+    new: function _new() {
+      uni.navigateTo({
+        url: '../tabs/new',
+        success: function success(res) {} });
+
+    },
+    agent: function agent() {
+      uni.navigateTo({
+        url: '../tabs/agent',
+        success: function success(res) {} });
+
+    },
+    xiao: function xiao() {
+      uni.navigateTo({
+        url: '../tabs/xiao',
+        success: function success(res) {} });
+
+    },
+    housePrice: function housePrice() {
+      uni.navigateTo({
+        url: '../tabs/housePrice',
+        success: function success(res) {} });
+
+    },
+    quarters: function quarters() {
+      uni.navigateTo({
+        url: '../tabs/quarters',
+        success: function success(res) {} });
 
     },
 
@@ -267,7 +331,7 @@ __webpack_require__.r(__webpack_exports__);
     // 下拉刷新
     onReachBottom: function onReachBottom() {var _this = this;
       this.ReachBottomCount += 1;
-      if (this.ReachBottomCount < 4) {
+      if (this.ReachBottomCount < 5) {
         setTimeout(function () {
           _this.HouseList = [].concat(_toConsumableArray(_this.HouseList), _toConsumableArray(_this.HouseList.slice(1, 5)));
         }, 500);

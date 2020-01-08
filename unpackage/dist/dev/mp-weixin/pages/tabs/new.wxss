@@ -1,0 +1,68 @@
+
+.new-input{
+	width:90%;
+	margin:0 5%;
+	height:60rpx;
+	line-height:60rpx;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	border:2rpx solid #ccc;
+	font-size:25rpx;
+	border-radius: 15rpx;
+}
+.uni-searchbar{
+	margin-left:5%;
+}
+/* 新房列表 */
+.uni-list{
+	-webkit-flex-wrap :nowrap;
+	    -ms-flex-wrap :nowrap;
+	        flex-wrap :nowrap;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.uni-list-cell{
+	height:auto;
+	border-bottom:2rpx solid #ccc;
+	white-space:pre-wrap;
+}
+.uni-media-list{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	margin: 25rpx;
+}
+.uni-media-list image{
+	height: 100px;
+	width: 115px;
+	border-radius: 5px;
+	display: inline-block;
+	overflow: hidden;
+}
+.uni-media-list-body{
+	height:auto;
+	width:400rpx;
+	margin:20rpx 20rpx 20rpx;
+	font-size:28rpx;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.uni-media-list-text-top{
+	line-height:50rpx;
+	-webkit-flex-wrap:wrap;
+	    -ms-flex-wrap:wrap;
+	        flex-wrap:wrap;
+}
+

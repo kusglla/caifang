@@ -6,7 +6,13 @@
     "pages/message/message",
     "pages/mine/mine",
     "pages/register/register",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/tabs/new",
+    "pages/tabs/agent",
+    "pages/tabs/newHouse",
+    "pages/tabs/quarters",
+    "pages/tabs/xiao",
+    "pages/detail/new-detail"
   ],
   "subPackages": [],
   "window": {
@@ -41,5 +47,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap31.json"
 }

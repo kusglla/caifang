@@ -31,6 +31,10 @@ swiper{
  	font-size: 24rpx;
  	text-align: center;
 }
+.xxk-text{
+	 font-size:24rpx;
+	 text-align: center;
+}
 .xxk image{
  	width: 80rpx;
  	height: 80rpx;

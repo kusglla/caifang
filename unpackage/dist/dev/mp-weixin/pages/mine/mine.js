@@ -160,14 +160,9 @@ var _default =
   data: function data() {
     // cityName:"佛山实时房价";
     return {
-
-
-
-
-
       userinfo: {},
       severList: [
-      [{ name: '佛山实时房价', icon: 'map.jpg' },
+      [{ name: '佛山实时房价', icon: 'map.png' },
       { name: '我的关注', icon: 'heart.png' },
       { name: '浏览历史', icon: 'time.png' },
       { name: '我的优惠卷', icon: 'money.png' },
@@ -185,7 +180,7 @@ var _default =
     init: function init() {
       //用户信息
       this.userinfo = {
-        // face:'/static/img/login/face.jpeg',
+        face: '/static/img/login/face.jpeg',
         username: "点击注册/登录" };
 
     },

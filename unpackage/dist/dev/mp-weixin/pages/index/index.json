@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "采房首页",
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "uni-search-bar": "/components/uni-search-bar/uni-search-bar",
     "uni-load-more": "/components/uLi-load-more/uLi-load-more"
